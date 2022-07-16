@@ -1,0 +1,24 @@
+{
+  "name": "payback",
+  "version": "1.0.0",
+  "description": "payback task",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikhiletc/payback.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikhiletc/payback/issues"
+  },
+  "homepage": "https://github.com/nikhiletc/payback#readme",
+  "dependencies": {
+    "playwright": "^1.23.2"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.3.0",
+    "@playwright/test": "^1.23.2"
+  }
+}
