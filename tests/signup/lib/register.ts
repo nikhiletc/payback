@@ -26,6 +26,7 @@ export class SignUp {
 
   async visitPaybackRegistrationPage() {
     await this.page.goto('/anmelden');
+    await expect(this.page).toHaveURL(/.*anmelden/);
     await this.acceptCookies();
   }
 
@@ -50,10 +51,12 @@ export class SignUp {
   async setSignUpEmail() {
     const randomEmail = faker.internet.email();
     await this.page.fill(registrationSelector.signUpEmail, randomEmail);
+    //!validate email error does not appear
     await expect(registrationSelector.errorMsg).toHaveLength(0);
   }
   async setPassword() {
     await this.page.fill(registrationSelector.signUpEmail, '1234');
+    //!validate password error does not appear
     await expect(registrationSelector.errorMsg).toHaveLength(0);
   }
 }

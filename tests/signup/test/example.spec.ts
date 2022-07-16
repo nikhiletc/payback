@@ -1,5 +1,5 @@
 import { test } from '@playwright/test';
-import { SignUp } from './signup/lib/register';
+import { SignUp } from '@signup-lib/register';
 
 test('create new registration', async ({ page }) => {
   const signup = new SignUp(page);
