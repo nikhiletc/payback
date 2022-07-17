@@ -1,0 +1,6 @@
+{
+  "playwright/missing-playwright-await": [
+    "error",
+    { "customMatchers": ["toBeCustomThing"] }
+  ]
+}

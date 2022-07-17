@@ -45,15 +45,18 @@ export class SignUp {
   async selectCardType(cardType: string) {
     await this.page.locator(`[data-id="${cardType}"]`).first();
   }
+  
   async waiter() {
     await this.page.locator(registrationSelector.signUpButton).first().click();
   }
+
   async setSignUpEmail() {
     const randomEmail = faker.internet.email();
     await this.page.fill(registrationSelector.signUpEmail, randomEmail);
     //!validate email error does not appear
     await expect(registrationSelector.errorMsg).toHaveLength(0);
   }
+
   async setPassword() {
     await this.page.fill(registrationSelector.signUpEmail, '1234');
     //!validate password error does not appear
