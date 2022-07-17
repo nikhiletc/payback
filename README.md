@@ -2,7 +2,7 @@
 
 ## Steps to run local e2e test
   
-- Pull the branch locally.
+- Pull the repo locally.
 - Install dependency.
 - in terminal type `npx playwright test --headed`
 
